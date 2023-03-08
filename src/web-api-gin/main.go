@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"golang/src/web-api-gin/entities"
 	"golang/src/web-api-gin/handlers"
 	"golang/src/web-api-gin/repositories"
@@ -13,6 +14,7 @@ import (
 )
 
 func main() {
+	fmt.Println("Web Api Gin")
 	dsn := "root@tcp(127.0.0.1:3306)/web-api-gin?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
